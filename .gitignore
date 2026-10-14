@@ -1,0 +1,165 @@
+########################################
+# CORE .NET / ASP.NET CORE
+########################################
+
+# Build outputs
+bin/
+obj/
+out/
+dist/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# Rider / VS Code
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+########################################
+# NODE / REACT FRONTEND
+########################################
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+/wwwroot/node_modules
+
+########################################
+# ENVIRONMENT & SECRETS (HR DATA SAFETY)
+########################################
+
+.env
+.env.*
+secrets.json
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.local.json
+*.pfx
+*.snk
+*.key
+*.pem
+
+# Ignore service-level appsettings containing secrets (keep examples in repo)
+/Server/SingularExpress.Api/appsettings.json
+/Server/SingularExpress.Api/App_Data/
+
+# Temporary or replacement files that may contain secrets
+/replace.txt
+
+########################################
+# DATABASE / SQL SERVER
+########################################
+
+*.mdf
+*.ldf
+*.ndf
+*.bak
+*.trn
+
+########################################
+# LOGS / TEMP FILES
+########################################
+
+*.log
+logs/
+temp/
+tmp/
+.cache/
+.history/
+
+########################################
+# TEST / COVERAGE
+########################################
+
+TestResults/
+coverage/
+coverage*.json
+coverage*.xml
+BenchmarkDotNet.Artifacts/
+
+########################################
+# PUBLISH / DEPLOYMENT OUTPUTS
+########################################
+
+publish/
+*.pubxml
+*.publishproj
+*.azurePubxml
+PublishScripts/
+
+########################################
+# NUGET / PACKAGE MANAGEMENT
+########################################
+
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+
+########################################
+# OS FILES
+########################################
+
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+########################################
+# TERRAFORM / DEVOPS (OPTIONAL BUT SAFE)
+########################################
+
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+terraform.rc
+.terraformrc
+tfplan
+
+########################################
+# CI/CD / PIPELINE OUTPUTS
+########################################
+
+artifacts/
+pipeline-output/
+**/tmp/code-coverage/**/*.*
+
+########################################
+# HR SYSTEM DATA PROTECTION (IMPORTANT)
+########################################
+
+# Prevent accidental commits of HR exports & reports
+*.xlsx
+*.csv
+*.pdf
+Reports/
+Exports/
+
+########################################
+# POWER BI / REPORTING (If used)
+########################################
+
+*.pbix
+*.pbit
+
+########################################
+# OPTIONAL — IGNORE GENERATED API CLIENTS
+########################################
+
+GeneratedClients/
+
+########################################
+# KEEP CERTIFICATES IF REQUIRED (EXPLICIT ALLOW)
+########################################
+
+!trusted-dev-cert.pfx
+/Server/.todo/tasks.json

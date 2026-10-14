@@ -1,0 +1,74 @@
+.signin {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(320px, 480px) 1fr;
+}
+
+.signin-form {
+  padding: var(--space-12) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--color-surface);
+}
+
+.signin-form h1 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-2);
+}
+
+.signin-form .lead {
+  color: var(--color-muted);
+  margin: 0 0 var(--space-8);
+}
+
+.signin-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-2);
+}
+
+.signin-footer {
+  margin-top: var(--space-12);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.signin-brand {
+  background: var(--color-closed);
+  color: var(--color-closed-ink);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-12);
+}
+
+.wordmark {
+  font-size: var(--text-display);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.wordmark-bold {
+  font-weight: 700;
+}
+
+.wordmark-light {
+  font-weight: 400;
+  opacity: 0.75;
+}
+
+@media (max-width: 760px) {
+  .signin {
+    grid-template-columns: 1fr;
+  }
+
+  .signin-brand {
+    order: -1;
+    padding: var(--space-8);
+  }
+
+  .wordmark {
+    font-size: var(--text-xl);
+  }
+}

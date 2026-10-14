@@ -1,0 +1,46 @@
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: var(--space-8);
+}
+
+.page-section {
+  margin-top: var(--space-8);
+}
+
+.page-section h2 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-4);
+}
+
+/* The current month is the headline of the app: big, plain, unmissable. */
+.period-headline {
+  font-size: var(--text-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.period-subline {
+  color: var(--color-muted);
+  font-size: var(--text-lg);
+  margin-top: var(--space-2);
+}
+
+.panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-panel);
+  padding: var(--space-6);
+}
+
+.panel p {
+  margin: 0 0 var(--space-4);
+  color: var(--color-ink-soft);
+  max-width: 65ch;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: var(--space-4);
+  }
+}

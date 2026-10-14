@@ -1,0 +1,181 @@
+/*
+  Design tokens for SingularExpress. Use these variables, never raw colours,
+  so light and dark mode both work.
+  Palette: Singular navy for structure, ledger teal for the one "live" thing
+  (the open period and primary actions), quiet greys for everything else.
+*/
+:root {
+  --color-ink: #1b2a4a;
+  --color-ink-soft: #4a5873;
+  --color-muted: #6b7890;
+  --color-paper: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-rule: #d9dee7;
+  --color-accent: #0f7b6c;
+  --color-accent-ink: #ffffff;
+  --color-accent-soft: #e3f2ef;
+  --color-closed: #1b2a4a;
+  --color-closed-ink: #ffffff;
+  --color-danger: #b42318;
+  --color-danger-soft: #fdecea;
+  --color-success: #0f7b6c;
+  --color-success-soft: #e3f2ef;
+
+  --font-sans: "Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+  --text-display: clamp(2.25rem, 5vw, 3.5rem);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+
+  --radius-control: 6px;
+  --radius-panel: 10px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-ink: #e6eaf2;
+    --color-ink-soft: #b7c0d1;
+    --color-muted: #8d98ad;
+    --color-paper: #0f1626;
+    --color-surface: #172036;
+    --color-rule: #2b3650;
+    --color-accent: #3fb8a4;
+    --color-accent-ink: #08131f;
+    --color-accent-soft: #143a39;
+    --color-closed: #3a4a6d;
+    --color-closed-ink: #e6eaf2;
+    --color-danger: #f0857b;
+    --color-danger-soft: #3a1c1c;
+    --color-success: #3fb8a4;
+    --color-success-soft: #143a39;
+    color-scheme: dark;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  color: var(--color-ink);
+  background: var(--color-paper);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Shared form controls */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+
+.field label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+
+.field input {
+  font: inherit;
+  padding: var(--space-3);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+
+.field-row {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.field-row input {
+  flex: 1;
+}
+
+.button {
+  font: inherit;
+  font-weight: 600;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-control);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button-primary {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--color-ink);
+  border-color: var(--color-rule);
+}
+
+.button-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-accent);
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.alert {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-control);
+  margin-bottom: var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.alert-error {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.alert-success {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
